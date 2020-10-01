@@ -1,3 +1,3 @@
 # asd-labs
 Labs from Algorithms and Data Structures class
-- [First](first/README.md)
+- [First](first)
