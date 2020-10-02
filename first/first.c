@@ -16,21 +16,21 @@ int main() {
     printf("Input number> ");
     scanf("%f", &x);
 
-    char interval[3];
+    const char *interval;
     char answer[] = "undefined";
 
     if (x >= 2) {
         if (x <= 7) {
             sprintf(answer, "%f", firstEquation(x));
-            sprintf(interval, "%s", "y1");
+            interval = "y1";
         } else if (x > 14) {
             sprintf(answer, "%f", secondEquation(x));
-            sprintf(interval, "%s", "y2");
+            interval = "y2";
         }
     } else if (x <= -3) {
         if (x > -13) {
             sprintf(answer, "%f", secondEquation(x));
-            sprintf(interval, "%s", "y2");
+            interval = "y2";
         }
     }
 
