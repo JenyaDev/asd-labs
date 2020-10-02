@@ -16,21 +16,24 @@ int main() {
     printf("Input number> ");
     scanf("%f", &x);
 
+    char interval[3];
+    char answer[] = "undefined";
+
     if (x >= 2) {
         if (x <= 7) {
-            printf("Got value y1(x)=%f with x=%f", firstEquation(x), x);
-            return 0;
+            sprintf(answer, "%f", firstEquation(x));
+            sprintf(interval, "%s", "y1");
         } else if (x > 14) {
-            printf("Got value y2(x)=%f with x=%f", secondEquation(x), x);
-            return 0;
+            sprintf(answer, "%f", secondEquation(x));
+            sprintf(interval, "%s", "y2");
         }
     } else if (x <= -3) {
         if (x > -13) {
-            printf("Got value y2(x)=%f with x=%f", secondEquation(x), x);
-            return 0;
+            sprintf(answer, "%f", secondEquation(x));
+            sprintf(interval, "%s", "y2");
         }
     }
 
-    printf("Got no value with x=%f", x);
+    printf("Got value %s(x)=%s with x=%f\n", interval, answer, x);
     return 0;
 }
