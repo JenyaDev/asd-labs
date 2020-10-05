@@ -1,14 +1,13 @@
 #include "stdio.h"
-#include "math.h"
 
 // Variant #26 - With logical operators
 
 float firstEquation(float x) {
-    return powf(x, 3) + 14;
+    return x*x*x + 14;
 }
 
 float secondEquation(float x) {
-    return -4*powf(x, 3) + 3*x - 7;
+    return -4*x*x*x + 3*x - 7;
 }
 
 int main() {
