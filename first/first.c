@@ -15,24 +15,22 @@ int main() {
     printf("Input number> ");
     scanf("%f", &x);
 
-    const char *interval;
-    char answer[] = "undefined";
-
     if (x >= 2) {
         if (x <= 7) {
-            sprintf(answer, "%f", firstEquation(x));
-            interval = "y1";
+            printf("Got value y1(x)=%f with x=%f\n", firstEquation(x), x);
         } else if (x > 14) {
-            sprintf(answer, "%f", secondEquation(x));
-            interval = "y2";
+            printf("Got value y2(x)=%f with x=%f\n", secondEquation(x), x);
+        } else {
+            printf("Got value y(x)=undefined with x=%f\n", x);
         }
     } else if (x <= -3) {
         if (x > -13) {
-            sprintf(answer, "%f", secondEquation(x));
-            interval = "y2";
+            printf("Got value y2(x)=%f with x=%f\n", secondEquation(x), x);
+        } else {
+            printf("Got value y(x)=undefined with x=%f\n", x);
         }
+    } else {
+        printf("Got value y(x)=undefined with x=%f\n", x);
     }
-
-    printf("Got value %s(x)=%s with x=%f\n", interval, answer, x);
     return 0;
 }
