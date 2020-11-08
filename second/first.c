@@ -13,7 +13,7 @@ int main() {
             double sumAdd = 0;
             for (int j = 1; j <= i; j++) {
                 sumAdd += sin(j) + 1;
-                counter += 3; // Sine and addition
+                counter += 3; // Sine and 2xaddition
             }
             sumMult *= sumAdd/i*(i+1);
             counter += 4; // 2xMultiplication, addition and division
